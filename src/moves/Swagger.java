@@ -12,8 +12,8 @@ public class Swagger extends StatusMove {
 
     @Override
     protected void applyOppEffects(Pokemon pokemon) {
-        Effect e = new Effect().turns(0).stat(Stat.ATTACK, 2);
-        pokemon.addEffect(e);
+        Effect Swagger = new Effect().turns(1).stat(Stat.ATTACK, 2);
+        pokemon.addEffect(Swagger);
         pokemon.confuse();
     }
 

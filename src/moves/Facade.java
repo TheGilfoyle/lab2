@@ -1,6 +1,5 @@
 package moves;
 
-import ru.ifmo.se.pokemon.*;
 import ru.ifmo.se.pokemon.Pokemon;
 import ru.ifmo.se.pokemon.Type;
 import ru.ifmo.se.pokemon.PhysicalMove;
@@ -10,27 +9,16 @@ public class Facade extends PhysicalMove {
         super(Type.NORMAL, 70, 1);
     }
 
-    //boolean s = false;
-
     //Power doubles if user is burned, paralyzed, or poisoned.
     @Override
     protected void applySelfEffects(Pokemon pokemon) {
-        /*
-        Effect a = new Effect().turns(0);
-        a.burn(pokemon);
-        if (s == true) {
-            //power = power / 2;
-            s = false;
-        }//чтобы сила возвращалась в прежднее значение
-        */
-        if (pokemon.getCondition() == Status.BURN || pokemon.getCondition() == Status.PARALYZE || pokemon.getCondition() == Status.POISON) {
-            //System.out.println(power);
-            power *= 2;
-            //System.out.println(power);
-            //s = true;
+        switch (pokemon.getCondition()) {
+            case BURN, POISON, PARALYZE -> {
+                this.power = 140;
+            }
+            default -> this.power = 70;
         }
     }
-
 
     @Override
     protected String describe() {

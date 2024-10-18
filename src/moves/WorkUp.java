@@ -10,7 +10,7 @@ public class WorkUp extends StatusMove {
 
     @Override
     protected void applySelfEffects(Pokemon pokemon) {
-        Effect effect = new Effect().turns(0).stat(Stat.ATTACK, 1).stat(Stat.SPECIAL_ATTACK, 1);
+        Effect effect = new Effect().turns(1).stat(Stat.ATTACK, 1).stat(Stat.SPECIAL_ATTACK, 1);
         pokemon.addEffect(effect);
     }
 

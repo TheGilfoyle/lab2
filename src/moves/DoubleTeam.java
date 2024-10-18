@@ -4,12 +4,15 @@ import ru.ifmo.se.pokemon.*;
 
 public class DoubleTeam extends StatusMove {
     public DoubleTeam() {
-        super(Type.NORMAL, 0, 0);
+        super(Type.NORMAL, 0, 1);
     }
-//    Raises the user's evasion by one stage.
+
+    //    Raises the user's evasion by one stage.
     @Override
     protected void applySelfEffects(Pokemon pokemon) {
-        pokemon.setMod(Stat.EVASION,1);
+        Effect DoubleTeam = new Effect().stat(Stat.EVASION, 1).turns(1);
+        pokemon.addEffect(DoubleTeam);
+
     }
 
     @Override

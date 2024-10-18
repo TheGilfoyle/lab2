@@ -11,7 +11,7 @@ public class Tackle extends PhysicalMove {
 
     @Override
     protected String describe() {
-        return "атакует обычной атакой moves.Tackle";
+        return "атакует атакой Tackle";
     }
 }
 

@@ -12,7 +12,6 @@ public class Lunatone extends Pokemon {
         super(name, level);
         this.setType(Type.ROCK, Type.PSYCHIC);
         this.setStats(90, 55, 65, 95, 85, 70);
-//        this.setMove(new moves.Facade(Type.NORMAL, 70, 1), new moves.Bulldoze(Type.GROUND, 60, 1));
         this.setMove(new Facade(), new Bulldoze(), new DoubleTeam(), new ShadowBall());
     }
 }
